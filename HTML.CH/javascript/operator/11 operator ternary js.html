@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | Operator Ternary</title>
+</head>
+<body>
+    <h1>Operator Ternary</h1>
+    <p>Operator ternary merupakan operator yang terdiri dari tiga bagian,pada JavaScript operator tenary biasa digunakan untuk membuat sebuah percabangan/kondisi if/else :</p>
+    <ol>
+        <li>kondisi (condition)</li>
+        <li>nilai jika kondisi nenar (expression if true)</li>
+        <li>nilai jika kondisi salah (expression if false)</li>
+    </ol>
+    <pre>
+        condition? expressionIftrue : expressionIfFalse
+    </pre>
+
+    <script>
+        //contoh penggunaan-1
+        var age=15;
+        var canVote = age >= 16 ? 'yes' : 'no';
+        document.write(canVote); //Output: Yes
+        document.write("<hr>"); //menambah garis horizontal
+
+        //contoh penggunaan-2
+        var pertanyaan = confirm('Apakah kamu suka Vidya?');
+        var jawaban = pertanyaan ? 'Ya' : 'Tidak';
+        document.write(jawaban); //Output: Ya atau Tidak
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | JavaScript Percabangan</title>
+</head>
+<body>
+    <h3>Apa itu percabangan dan kenapa di namakan percabangan?</h3>
+    <p>Percabangan adalah sebuah konsep dalam pemrograman yang mempermudah seseorang untuk membuat keputusan berdasarkan kondisi tertentu.Dinamakan bercabang karena program dapat "<strong>Bercabang</strong>" ke jalur yang berbeda tergantung pada hasil evaluasi kondisi tersebut.</p>
+    <p>Dalam JavaScript percabangan biasanya dilakukan melalui struktur kontrol seperti <code>If</code>,<code>Else If</code>, dan <code>Else</code>.Dalam JavaScript terdapat 6 bentuk percabangan:</p>
+
+    <ol>
+        <li><code>If</code></li>
+        <li><code>If...Else</code></li>
+        <li><code>If...Else If...Else</code></li>
+        <li><code>Switch</code></li>
+        <li><code>Ternary Operator</code></li>
+        <li><code>Short-circuit Evaluation</code></li>
+    </ol>
+
+    <script>
+        //contoh percabangan if
+        document.write("<h3>contoh percabangan if</h3>");
+        var belanja = prompt ("masukan jumlah belanja kamu :", 0 , "number");
+            if(belanja >= 100000){
+               document.write("Total belanja kamu adalah " + belanja + "<br>");
+               document.write("Selamat kamu mendapatkan diskon 10%");
+        }
+
+        //contoh percabangan if else
+        document.write("<hr3>COntoh percabangan if else</h3>");
+            var totaljajan = prompt("Masukan total jajan kamu :", 0 , "number");
+
+            if (totaljajan >= 50000){
+                document.write("Total jajan kamu adalah " + totaljajan + "<br>");
+                document.write("Kamu jajan terlalu banyak!");
+            } else {
+                document.write("Total jajan kamu adalah " + totaljajan + "<br>");
+                document.write("Total jajan kamu masih wajar,Kontrol agar tidak hampir habis!");
+            }
+
+
+        //contoh percabangan if else if else
+        document.write("<hr><h3>contoh percabangan if else if else</h3>");
+            var nilai = prompt("Masukan nilai kamu :", 0 , "number");
+
+            if (nilai >= 90){
+                document.write("Nilai kamu adalah " + nilai + "<br>");
+                document.write("Selamat kamu mendapatkan nilai A!");
+            } else if (nilai >= 80){
+                document.write("Nilai kamu adalah " + nilai + "<br>");
+                document.write("Selamat kamu mendapatkan nilai B!");
+            } else if (nilai >= 70){
+                document.write("Nilai kamu adalah " + nilai + "<br>");
+                document.write("Selamat kamu mendapatkan nilai C!");
+            } else if (nilai >= 60){
+                document.write("Nilai kamu adalah " + nilai + "<br>");
+                document.write("Selamat kamu mendapatkan nilai D!");
+            } else {
+                document.write("Nilai kamu adalah " + nilai + "<br>");
+                document.write("Maaf kamu mendapatkan nilai E!");
+            }
+
+        //contoh percabangan switch
+        document.write("<hr><h3>contoh percabangan switch</h3>");
+        var hari = prompt("Masukan nama hari :");
+        switch(hari.toLowerCase()){
+            case "senin":
+                document.write("Hari ini adalah hari Senin");
+                break;
+            case "selasa":
+                document.write("Hari ini adalah hari Selasa");
+                break;
+            case "rabu":
+                document.write("Hari ini adalah hari Rabu");
+                break;
+            case "kamis":
+                document.write("Hari ini adalah hari Kamis");
+                break;
+            case "jumat":
+                document.write("Hari ini adalah hari Jumat");
+                break;
+            case "sabtu":
+                document.write("Hari ini adalah hari Sabtu");
+                break;
+            case "minggu":
+                document.write("Hari ini adalah hari Minggu");
+                break;
+            default:
+                document.write("Nama hari yang kamu masukan salah! #nubaleg");
+        }
+
+
+    //contoh percabangan ternary operator
+    //percabangan ternary operator adalah salah satu bentuk singkat dari percabangan if else yang menggunakan operator ternary ( ? : ) untuk mengevaluasi kondisi dan menghasilkan nilai berdasarkan hasil evaluasi tersebut.
+
+    document.write("<hr><h3>contoh percabangan ternary operator</h3>");
+    var umur = prompt("Masukan umur kamu :", 0 , "number");
+    var status = (umur >= 18) ? "Dewasa" : "Belum Dewasa";
+    document.write("Umur kamu " + umur + "<br>");
+    document.write("Status kamu adalah " + status);
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | JavaScript Perulangan</title>
+</head>
+<body>
+    <script>
+        //contoh menggunakan for
+        document.write("contoh menggunakan for <br>");
+        for(let i = 1; i <= 5; i++){
+            document.write( i +".Kuarsh"+"<br>");
+        }
+
+        document.write("<hr>");
+
+        //contoh menggunakan while
+        document.write("contoh menggunakan while <br>");
+        let j =1;
+        while(j <= 5){
+            document.write(j +".Developer"+"<br>");
+            j++;
+        }
+
+        document.write("<hr>");
+
+        //contoh menggunakan do while
+        document.write("contoh menggunakan do while <br>");
+        let k =1;
+        do{
+            document.write(k +".CEO,MONEY,MONEY,MONEY,WOMEN"+"<br>");
+            k++;
+        } while(k <= 5);
+
+        document.write("<hr>");
+
+        //contoh menggunakan for of
+        document.write("contoh menggunakan for of <br>");   
+        let nama = ["MGMT","DJ SNAKE","ALOMANI",];
+        for(let n of nama){
+            document.write(n + "<br>");
+        }
+
+        document.write("<hr>");
+
+        //contoh menggunakan for in
+        document.write("contoh menggunakan for in <br>");
+        let orang = {
+            nama:"Cepi Handani",
+            umur: 15,
+            pekerjaan: "Developer",
+        }
+        for(let o in orang){
+            document.write(o + ": " + orang[o] + "<br>");
+        }
+    </script>
+</body>
+</html>

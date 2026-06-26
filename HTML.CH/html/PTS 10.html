@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Makanan</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f7d9aa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      width: 320px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #f57c00;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background: #ef6c00; }
+    img {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      display: none;
+    }
+    audio { margin-top: 15px; width: 100%; }
+    .hasil { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>daftar menu</h2>
+    <form>
+      <button type="button" onclick="document.getElementById('nasi_goreng').style.display='block';       document.getElementById('mie_ayam').style.display='none'; document.getElementById('sate_ayam').style.display='none'; document.getElementById('es_teh').style.display='none'; document.getElementById('rendang').style.display='none';">Nasi Goreng - 15k
+      </button>
+      <button type="button" onclick="document.getElementById('nasi_goreng').style.display='none'; document.getElementById('mie_ayam').style.display='block'; document.getElementById('sate_ayam').style.display='none'; document.getElementById('es_teh').style.display='none'; document.getElementById('rendang').style.display='none';">mie ayam - 12k
+      </button>
+      <button type="button" onclick="document.getElementById('nasi_goreng').style.display='none'; document.getElementById('mie_ayam').style.display='none'; document.getElementById('sate_ayam').style.display='block'; document.getElementById('es_teh').style.display='none'; document.getElementById('rendang').style.display='none';">sate ayam - 25k
+      </button>
+      <button type="button" onclick="document.getElementById('nasi_goreng').style.display='none'; document.getElementById('mie_ayam').style.display='none'; document.getElementById('sate_ayam').style.display='none'; document.getElementById('es_teh').style.display='block'; document.getElementById('rendang').style.display='none';">esteh - 10k
+      </button>
+      <button type="button" onclick="document.getElementById('nasi_goreng').style.display='none'; document.getElementById('mie_ayam').style.display='none'; document.getElementById('sate_ayam').style.display='none'; document.getElementById('es_teh').style.display='none'; document.getElementById('rendang').style.display='block';">rendang - 18k</button>
+      </form>
+    <img id="nasi_goreng" src="/gambar/nasi goreng.png" alt="Nasi Goreng">
+    <img id="mie_ayam" src="/gambar/mie ayam.png" alt="Mie Ayam">
+    <img id="sate_ayam" src="/gambar/sate ayam.png" alt="Sate Ayam">
+    <img id="es_teh" src="/gambar/es teh.png" alt="Es Teh">
+    <img id="rendang" src="/gambar/rendang.png" alt="Rendang">
+    </div>
+  <div class="container">
+    <h2>pesanan</h2>
+    <form id="pesanForm">
+      <input type="text" id="nama" placeholder="Nama" required>
+      <select id="makanan">
+        <option value="">--Pilih--</option>
+        <option value="nasi_goreng">Nasi Goreng </option>
+        <option value="mie_ayam">Mie Ayam </option>
+        <option value="sate_ayam">Sate Ayam </option>
+        <option value="es_teh">Es Teh </option>
+        <option value="rendang">Rendang </option>
+      </select>
+      <input type="number" id="jumlah" placeholder="Jumlah" min="1" required>
+      <button type="submit">Pesan</button>
+    </form>
+
+    
+
+    <!-- Slot lagu -->
+    <audio id="music" src="/music/Shop.flac" loop></audio>
+  <script>
+    document.addEventListener("click", function() {
+      let music = document.getElementById("music");
+      music.play();
+    }, {once: true});
+  </script>
+
+    <div class="hasil" id="hasil"></div>                                                                                              
+  </div>
+  
+
+  <script>
+    document.getElementById("pesanForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let nama = document.getElementById("nama").value;
+      let makanan = document.getElementById("makanan").options[document.getElementById("makanan").selectedIndex].text;
+      let jumlah = document.getElementById("jumlah").value;
+      document.getElementById("hasil").innerText =
+        "Pesanan: " + nama + " memesan " + jumlah + " " + makanan;
+    });
+  </script>
+</body>
+</html>

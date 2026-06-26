@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layouting - Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-bottom: 100px; background-color: #f8f9fa; }
+        .section-box { background: white; padding: 20px; margin-top: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .parent-box { width: 100%; height: 300px; background: #e9ecef; position: relative; }
+        .child-box { width: 100px; height: 100px; }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="container">
+        <h1 class="text-center mb-5">Eksperimen Display, Float & Position</h1>
+
+        <div class="section-box">
+            <h4>1. Display Utilities</h4>
+            <p class="text-muted">elemen berjejer atau makan tempat.</p>
+            
+            <div class="bg-light p-3 border">
+                <span class="d-inline bg-primary text-white p-2">Inline (Nempel)</span>
+                <span class="d-inline bg-primary text-white p-2">Inline (Nempel)</span>
+                
+                <hr>
+                
+                <div class="d-block bg-success text-white p-2 mb-2">Block (Satu Baris Penuh)</div>
+                <div class="d-block bg-success text-white p-2">Block (Satu Baris Penuh)</div>
+                
+                <hr>
+                
+                <div class="d-inline-block bg-warning p-2" style="width: 150px; height: 100px;">Inline-Block (Bisa Lebar)</div>
+                <div class="d-inline-block bg-warning p-2" style="width: 150px; height: 100px;">Inline-Block (Bisa Lebar)</div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h4>2. Float & Clearfix</h4>
+            <p class="text-muted">Paksa elemen ke kiri atau kanan.</p>
+            
+            <div class="clearfix bg-dark p-3 rounded">
+                <div class="float-start bg-info p-3">Saya Kiri (Start)</div>
+                <div class="float-end bg-danger text-white p-3">Saya Kanan (End)</div>
+            </div>
+            <p class="mt-2 small text-danger">*Wajib class 'clearfix' di pembungkus biar gak berantakan</p>
+        </div>
+
+        <div class="section-box">
+            <h4>3. Positioning System</h4>
+            <p class="text-muted"> koordinat elemen (Melayang/Stay).</p>
+            
+            <div class="parent-box border">
+                <div class="child-box position-relative bg-primary text-white p-2" style="top: 20px; left: 20px;">
+                    Relative (Geser 20px)
+                </div>
+
+                <div class="child-box position-absolute bottom-0 end-0 bg-danger text-white p-2">
+                    Absolute (Pojok Kanan Bawah)
+                </div>
+
+                <div class="position-absolute top-50 start-50 translate-middle bg-dark text-white p-3 rounded">
+                    Tengah-Tengah
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-warning position-fixed bottom-0 end-0 m-4 shadow-lg" style="z-index: 1050;">
+            Floating Button (Fixed)
+        </button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

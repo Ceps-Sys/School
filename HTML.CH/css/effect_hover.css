@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .container .card {
+    width: 250px;
+    height: 350px;
+    border: 3px solid rgb(148, 144, 144);
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .container .card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-top: 3px solid rgb(75, 119, 212);
+    border-left: 3px solid rgb(219, 68, 68);
+    top: -3px;
+    left: -3px;
+    border-radius: 5px;
+ }
+
+.container .card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-right: 3px solid rgb(75, 119, 212);
+    border-bottom: 3px solid rgb(219, 68, 68);
+    right: -3px;
+    bottom: -3px;
+ }
+
+ .container .card h1 {
+    color: cadetblue;
+    font-size: 25px;
+    letter-spacing: -5px;
+    font-family: cursive;
+ }
+
+ .container .card p {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    transform: scale(0) translateY(200px);
+   
+ }
+
+ .container .card button {
+   display: block;
+   width: 100px;
+   height: 25px;
+   background-color: rgb(75, 119, 212);
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   color:rgb(148, 144, 144);
+   font-size: 0.7em;
+   transform: scale(0) ;
+ }
+
+ .card:hover::after {
+   right: -12px;
+   bottom: -12px;
+   transition: 0.3s;
+ }
+
+  .card:hover::before {
+   left: -12px;
+   top: -12px;
+   transition: 0.3s;
+ }
+
+ .card:hover h1 span:nth-child(even) {
+   color: rgb(219, 68, 68);
+   transition: .5s .3s;
+ }
+
+ .card:hover h1 {
+   transform: translateY(0);
+   transition: .5s .3s; 
+ }
+
+ .card:hover p {
+   transform: scale(1) translateY(0);
+   transition: .3s .4s; 
+ }
+
+ .card:hover button {
+   transform: scale(1) ;
+   transition: .3s .6s; 
+ }
+

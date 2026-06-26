@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Typography Bootstrap 5 - RPL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 20px; }
+        .demo-section { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        h5 { color: #0d6efd; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-5">Typography Bootstrap 5</h1>
+
+        <div class="demo-section">
+            <h5>1. Heading & Display</h5>
+            <h1 class="display-1">Display 1</h1>
+            <h1 class="display-6">Display 6</h1>
+            <p class="h4">Ini tag P tapi rasa H4</p>
+        </div>
+
+        <div class="demo-section">
+            <h5>2. Lead & Text Muted</h5>
+            <p class="lead">Ini adalah class 'lead', biasanya buat paragraf pembuka biar lebih enak dibaca.</p>
+            <p class="text-muted">Ini teks muted, warnanya agak abu-abu (biasanya buat keterangan tambahan).</p>
+        </div>
+
+        <div class="demo-section">
+            <h5>3. Font Weight & Styles</h5>
+            <p class="fw-bold">Teks Tebal (Bold)</p>
+            <p class="fw-normal">Teks Normal</p>
+            <p class="fw-light">Teks Tipis (Light)</p>
+            <p class="fst-italic">Teks Miring (Italic)</p>
+        </div>
+
+        <div class="demo-section">
+            <h5>4. Text Transformation</h5>
+            <p class="text-uppercase">teks ini aslinya kecil jadi besar semua</p>
+            <p class="text-lowercase">TEKS INI ASLINYA BESAR JADI KECIL SEMUA</p>
+            <p class="text-capitalize">teks ini huruf depannya saja yang besar</p>
+        </div>
+
+        <div class="demo-section">
+            <h5>5. Text Decoration</h5>
+            <p class="text-decoration-underline">Teks dengan garis bawah</p>
+            <p class="text-decoration-line-through">Teks yang dicoret (kayak harga diskon)</p>
+            <a href="#" class="text-decoration-none">Link tanpa garis bawah (sering dipakai di navbar)</a>
+        </div>
+
+        <div class="demo-section">
+            <h5>6. Text Truncate (Pangkas Teks)</h5>
+            <div class="text-truncate" style="max-width: 250px; background-color: #f8f9fa;">
+                Ini adalah contoh teks yang sangat panjang sekali sehingga tidak muat dalam satu baris dan akan dipangkas oleh Bootstrap.
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h5>7. List Unstyled & Inline</h5>
+            <p>Tanpa Bullet:</p>
+            <ul class="list-unstyled">
+                <li>Item Satu</li>
+                <li>Item Dua</li>
+            </ul>
+            <p>Berjajar ke Samping (Inline):</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">Beranda</li>
+                <li class="list-inline-item">Profil</li>
+                <li class="list-inline-item">Kontak</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h5>8. Blockquote (Kutipan)</h5>
+            <figure>
+              <blockquote class="blockquote">
+                <p>"Koding itu gampang, yang susah itu nyari error-nya."</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Anak RPL <cite title="Source Title">Angkatan 2026</cite>
+              </figcaption>
+            </figure>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

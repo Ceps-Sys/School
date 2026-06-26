@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device=width, initial-scale=1.0">
+    <title>Table | Cepi</title>
+</head>
+
+<body style="background-color: rgba(255, 174, 0, 0.904);">
+    <h3>Mengenal Tabel Standar</h3>
+    <table border="1">
+        <tr>
+            <td>R1k1</td>
+            <td>R1k2</td>
+            <td>R1k3</td>
+            <td>R1k4</td>
+            <td>R1k5</td>
+        </tr>
+        <tr>
+            <td>R2k1</td>
+            <td>R2k2</td>
+            <td>R2k3</td>
+            <td>R2k4</td>
+            <td>R2k5</td>
+        </tr>
+        <tr>
+            <td>R3k1</td>
+            <td>R3k2</td>
+            <td>R3k3</td>
+            <td>R3k4</td>
+            <td>R3k5</td>
+        </tr>
+        <tr>
+            <td>R4k1</td>
+            <td>R4k2</td>
+            <td>R4k3</td>
+            <td>R4k4</td>
+            <td>R4k5</td>
+        </tr>
+        <tr>
+            <td>R5k1</td>
+            <td>R5k2</td>
+            <td>R5k3</td>
+            <td>R5k4</td>
+            <td>R5k5</td>
+        </tr>
+    </table>
+
+    <h3 span style="color: green;">Mengenal Tabel Penggabungan Row</h3>
+    <table border="1">
+        <tr>
+            <td rowspan="2">R1k1</td>
+            <td>R1k2</td>
+            <td>R1k3</td>
+            <td>R1k4</td>
+            <td>R1k5</td>
+        </tr>
+        <tr>
+            <!-- <td>R2k1</td> ini di hapus kr di gabung -->
+            <td>R2k2</td>
+            <td>R2k3</td>
+            <td rowspan="3">R2k4</td>
+            <td>R2k5</td>
+        </tr>
+        <tr>
+            <td>R3k1</td>
+            <td>R3k2</td>
+            <td>R3k3</td>
+            <!-- <td>R3k4</td> -->
+            <td>R3k5</td>
+        </tr>
+        <tr>
+            <td>R4k1</td>
+            <td>R4k2</td>
+            <td>R4k3</td>
+            <td>R4k4</td>
+            <!-- <td>R4k5</td -->
+        </tr>
+        <tr>
+            <td>R5k1</td>
+            <td>R5k2</td>
+            <td>R5k3</td>
+            <td>R5k4</td>
+            <td>R5k5</td>
+        </tr>
+    </table>
+    <h3>Mengenal Tabel Penggabungan Kolom</h3>
+    <table border="1">
+        <tr>
+            <td>R1k1</td>
+            <td colspan="3">R1k2</td>
+            <!-- <td>R1K3</td> -->
+            <!-- <td>R1K4</td> -->
+            <td>R1k5</td>
+        </tr>
+        <tr>
+            <td>R2k1</td>
+            <td>R2k2</td>
+            <td>R2k3</td>
+            <td>R2k4</td>
+            <td>R2k5</td>
+        </tr>
+        <tr>
+            <td>R3k1</td>
+            <td>R3k2</td>
+            <td>R3k3</td>
+            <td>R3k4</td>
+            <td>R3k5</td>
+        </tr>
+        <tr>
+            <td>R4k1</td>
+            <td>R4k2</td>
+            <td>R4k3</td>
+            <td>R4k4</td>
+            <td>R4k5</td>
+        </tr>
+        <tr>
+            <td>R5k1</td>
+            <td>R5k2</td>
+            <td>R5k3</td>
+            <td>R5k4</td>
+            <td>R5k5</td>
+        </tr>
+    </table>
+    <h3>Tabel Gabungan</h3>
+    <table border="1">
+        <tr>
+            <td bgcolor="yellow" colspan="6">R1k1</td>
+            <!-- <td>R1k2</td> -->
+            <!-- <td>R1k3</td> -->
+            <!-- <td>R1k4</td> -->
+            <!-- <td>R1k5</td> -->
+            <!-- <td>R1k6</td> -->
+        </tr>
+        <tr>
+            <td bgcolor="red" rowspan="3" colspan="2">R2k1</td>
+            <!-- <td>R2k2</td> -->
+            <td bgcolor="lime" colspan="2">R2K3</td>
+            <!-- <td>R2k4</td> -->
+            <td bgcolor="pink" colspan="2">R2k5</td>
+            <!-- <td>R2k6</td> -->
+        </tr>
+        <tr>
+            <!-- <td>R3k1</td> -->
+            <!-- <td>R3k2</td> -->
+            <td bgcolor="brown" colspan="2">R3k3</td>
+            <!-- <td>R3k4</td> -->
+            <td>R3k5</td>
+            <td>R3k6</td>
+        </tr>
+        <tr>
+            <!-- <td>R4k1</td> -->
+            <!-- <td>R4k2</td> -->
+            <td>R4k3</td>
+            <td>R4k4</td>
+            <td>R4k5</td>
+            <td>R4k6</td>
+        </tr>
+        <tr>
+            <td bgcolor="blue" rowspan="2">R5k1</td>
+            <td>R5k2</td>
+            <td>R5k3</td>
+            <td>R5k4</td>
+            <td>R5k5</td>
+            <td>R5k6</td>
+        </tr>
+        <tr>
+            <!-- <td>R6k1</td> -->
+            <td>R6k2</td>
+            <td>R6k3</td>
+            <td>R6k4</td>
+            <td>R6k5</td>
+            <td>R6k6</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+</body>
+
+</html>

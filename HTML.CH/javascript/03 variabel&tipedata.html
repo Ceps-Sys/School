@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabel & Tipe Data</title>
+</head>
+<body>
+    <script>
+        // Membuat variabel
+        var sekolah = "SMK MVP";
+        var namaLengkap = "Cepi";
+        var status = "pelajar";
+        var jurusan = "Rekayasa Perangkat lunak";
+        // pada Javascript kita dianjurkan menggunakan camelCase dalam penamaan;
+
+        // Menampilkan variabel ke alert
+        alert("Selamat datang di " + sekolah)
+
+        // Menampilkan variabel ke dalam HTML
+        document.write("Nama Siswa : " + namaLengkap + "<br>");
+        document.write("Nama Sekolah : " + sekolah + "<br>");
+        document.write("Jurusan : " + jurusan + "<br>");
+        document.write("Status Siswa : " + status + "<br><hr>");
+
+        // Mengisi Ulang Variabel
+        // 1. Membuat variabel dengan isi awal
+        var umur = 15;
+
+        // 2. lalu kita isi ulang/ganti, untuk isi ulang kita tidak perlu menggunakan var lagi, jika kita buat var maka di anggap menjadi dua variabel
+        age = 15;
+
+        // 3. Kita munculkan
+        document.writeln("isi dari variabel age : " + age + "<br>");
+
+        // // Menghapus variabel
+        // var hapusAja = "Ini isi variabel yang tidak akan muncul";
+        // // hapusAja = null;
+
+        document.writeln("Isi variabel hapusAja : " + hapusAja);
+    </script>
+</body>
+</html>

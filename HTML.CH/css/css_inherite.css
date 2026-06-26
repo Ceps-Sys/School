@@ -1,0 +1,7 @@
+body {
+    color: red;
+}
+/*inherit mengikutip nilai dari parent element*/
+a {
+    color: inherit;
+}

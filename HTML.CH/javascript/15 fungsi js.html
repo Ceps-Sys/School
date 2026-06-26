@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Function JavaScript</title>
+</head>
+<body>
+
+    <h1>Buka Console Browser (F12) untuk Melihat Hasil Function</h1>
+
+    <script>
+
+        /*
+           APA ITU FUNCTION?
+           Function (fungsi) adalah sebuah blok kode yang dibuat untuk menjalankan 
+           dan menghandle tugas tertentu sesuai keinginan kita. Kita cukup membuat 
+           kodenya sekali, lalu bisa dipanggil berkali-kali.
+
+           STRUKTUR DASAR:
+           function namaFungsi(parameter1, parameter2) {
+               // Kode atau tugas yang akan dieksekusi di sini
+           }
+           
+           Cara memanggilnya: namaFungsi(argumen1, argumen2);
+        */
+
+
+        // --- 1. FUNCTION DASAR (TANPA PARAMETER) ---
+        // Membuat fungsi bernama 'halo' untuk mencetak teks ke console
+        function halo() {
+            console.log("halo dunia"); // Tugas fungsi ini
+        }
+
+        console.log("--- Eksekusi Function Dasar ---");
+        // PERINGATAN: Function tidak akan jalan kalau tidak dipanggil!
+        halo(); // Cara memanggil fungsi dasar
+
+
+        // --- 2. FUNCTION DENGAN PARAMETER DATA ---
+        // Parameter adalah variabel penampung nilai/kondisi yang ditaruh di dalam kurung fungsi.
+        // Di sini kita membuat parameter: nama, email, dan password.
+        function dataSaya(nama, email, password) {
+            console.log("Nama:", nama);
+            console.log("Email:", email);
+            console.log("Password:", password);
+        }
+
+        console.log("\n--- Eksekusi Function Data ---");
+        // Memanggil fungsi sambil mengirimkan data asli (disebut argumen) ke dalam parameternya
+        dataSaya("Robby", "robby@example.com", "rahasia123");
+
+
+        // --- 3. FUNCTION UNTUK PERHITUNGAN (PERKALIAN) ---
+        // Membuat fungsi matematika yang menampung 4 angka (a, b, c, d) lalu mengalikannya
+        function perkalian(a, b, c, d) {
+            console.log("Hasil Perkalian:", a * b * c * d);
+        }
+
+        console.log("\n--- Eksekusi Function Perkalian ---");
+        // Angka 5 masuk ke a, angka 2 masuk ke b, angka 1 masuk ke c, angka 9 masuk ke d
+        perkalian(5, 2, 1, 9); // Hasil di console: 90
+
+
+        // --- 4. FUNCTION UNTUK PERHITUNGAN (PERTAMBAHAN) ---
+        // Membuat fungsi untuk menjumlahkan 4 angka yang dikirim
+        function pertambahan(a, b, c, d) {
+            console.log("Hasil Pertambahan:", a + b + c + d);
+        }
+
+        console.log("\n--- Eksekusi Function Pertambahan ---");
+        // Mengirimkan angka 5, 6, 2, dan 1 untuk dijumlahkan
+        pertambahan(5, 6, 2, 1); // Hasil di console: 14
+
+    </script>
+</body>
+</html>

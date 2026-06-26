@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Data Array</title>
+</head>
+<body>
+
+    <h1>Buka Console Browser (F12) untuk Melihat Hasil Array (karena memakai console.log)</h1>
+
+    <script>
+        // =========================================================================
+        //                  MATERI DATA ARRAY JAVASCRIPT (UTUH)
+        // =========================================================================
+
+        // --- 1. MEMBUAT ARRAY & MENGAKSES ELEMEN ---
+        // Array adalah variabel yang bisa menyimpan banyak data sekaligus.
+        // Data di dalam array disebut 'elemen', dan posisinya dihitung dari indeks 0.
+
+        let fruits = ["apple", "orange", "banana"]; 
+
+        console.log("--- Isi Array Awal ---");
+        console.log(fruits); // Menampilkan semua data: ["apple", "orange", "banana"]
+
+        // Mengakses data satu per satu lewat nomor indeksnya
+        console.log(fruits[0]); // Output: "apple" (Data pertama)
+        console.log(fruits[1]); // Output: "orange" (Data kedua)
+        console.log(fruits[2]); // Output: "banana" (Data ketiga)
+        console.log(fruits[3]); // Output: undefined (Karena data keempat belum ada)
+
+        // Mengubah isi data pada indeks tertentu
+        fruits[0] = "coconut"; // Mengubah "apple" menjadi "coconut"
+        console.log("Setelah diubah index 0:", fruits); 
+
+
+        // --- 2. MANIPULASI DATA (TAMBAH & HAPUS ELEMEN) ---
+        // Kembalikan dulu datanya ke awal biar rapi
+        fruits = ["apple", "orange", "banana"];
+
+        // .push() berfungsi menambahkan data baru ke posisi paling AKHIR
+        fruits.push("coconut"); 
+        console.log("Setelah push:", fruits); // ["apple", "orange", "banana", "coconut"]
+
+        // .pop() berfungsi menghapus data yang berada di posisi paling AKHIR
+        fruits.pop(); 
+        console.log("Setelah pop:", fruits); // ["apple", "orange", "banana"]
+
+        // .unshift() berfungsi menambahkan data baru ke posisi paling AWAL/DEPAN
+        fruits.unshift("mango"); 
+        console.log("Setelah unshift:", fruits); // ["mango", "apple", "orange", "banana"]
+
+        // .shift() berfungsi menghapus data yang berada di posisi paling AWAL/DEPAN
+        fruits.shift(); 
+        console.log("Setelah shift:", fruits); // ["apple", "orange", "banana"]
+
+
+        // --- 3. PROPERTI LENGTH & METHOD INDEXOF ---
+
+        // .length digunakan untuk menghitung total jumlah data yang ada di dalam array
+        let totalBuah = fruits.length; 
+        console.log("Total jumlah buah:", totalBuah); // Output: 3
+
+        // .indexOf() digunakan untuk mencari nomor indeks dari suatu data
+        let posisiOrange = fruits.indexOf("orange"); 
+        console.log("Indeks buah orange:", posisiOrange); // Output: 1
+
+        // Catatan: Jika data tidak ditemukan, .indexOf() akan selalu menghasilkan angka -1
+        let posisiMango = fruits.indexOf("mango"); 
+        console.log("Indeks mango (tidak ada):", posisiMango); // Output: -1
+
+
+        // --- 4. PERULANGAN (LOOPING) DATA ---
+        // Kita tambahkan satu data lagi ke belakang biar array-nya ramai
+        fruits.push("coconut"); // Array sekarang: ["apple", "orange", "banana", "coconut"]
+
+        // Cara A: Menggunakan For Loop Biasa (Maju dari depan ke belakang)
+        console.log("--- Loop Biasa (Maju) ---");
+        for(let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]); 
+        }
+
+        // Cara B: Menggunakan For Loop Terbalik (Mundur dari belakang ke depan)
+        // Kita mulai indeksnya dari (total data - 1) karena indeks selalu lebih kecil 1 dari jumlah data
+        console.log("--- Loop Terbalik (Mundur) ---");
+        for(let i = fruits.length - 1; i >= 0; i--) {
+            console.log(fruits[i]); 
+        }
+
+        // Cara C: Menggunakan Enhanced For Loop (For...of) 
+        // Ini cara paling singkat, bersih, dan modern kalau cuma ingin nampilin semua data
+        console.log("--- Loop Modern (For...of) ---");
+        for(let fruit of fruits) {
+            console.log(fruit); // Variabel 'fruit' otomatis mewakili tiap data di dalam array
+        }
+
+
+        // --- 5. MENGURUTKAN DATA (SORTING) ---
+
+        // .sort() digunakan untuk mengurutkan data sesuai abjad dari A sampai Z
+        fruits.sort(); 
+        console.log("Urutan sesuai abjad (A-Z):", fruits); 
+        // Output: ["apple", "banana", "coconut", "orange"]
+
+        // Untuk mengurutkan terbalik dari Z sampai A, gabungkan fungsi .sort() dengan .reverse()
+        fruits.sort().reverse(); 
+        console.log("Urutan terbalik (Z-A):", fruits); 
+        // Output: ["orange", "coconut", "banana", "apple"]
+
+    </script>
+</body>
+</html>

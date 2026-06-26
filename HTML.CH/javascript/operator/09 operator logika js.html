@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | Operator Logika</title>
+</head>
+<body>
+    <p>Operator logika digunakan untuk melakukan operasi terhadap dua nilai <strong>Boolean</strong>.Operator logika terdiri dari:</p>
+    <ul>
+        <li>&& (Logika AND)</li>
+        <li>|| (Logika or)</li>
+        <li>! (Logika not)</li>
+    </ul>
+
+    <script>
+        var a=20;
+        var b=10;
+
+        var benar =a > b;
+        var salah =a < b;
+
+        //logika AND (&&)
+        document.writeln("Hasil dari benar && salah adalah : " + (benar && salah) + "<br>");
+        document.writeln("Hasil dari benar && benar adalah : " + (benar && benar) + "<br>");
+        document.writeln("Hasil dari salah && salah adalah : " + (salah && salah) + "<br>");
+        document.writeln("Hasil dari salah && benar adalah : " + (salah && benar) + "<br>");
+
+        //logika OR (||)
+        document.writeln("Hasil dari benar || salah adalah : " + (benar || salah) + "<br>");
+        document.writeln("Hasil dari benar || benar adalah : " + (benar || benar) + "<br>");
+        document.writeln("Hasil dari salah || salah adalah : " + (salah || salah) + "<br>");
+        document.writeln("Hasil dari salah || benar adalah : " + (salah || benar) + "<br>");
+
+        //logika NOT (!)
+        document.writeln("Hasil dari !benar adalah : " + (!true) + "<br>");
+        document.writeln("Hasil dari !salah adalah : " + (!false) + "<br>");
+    </script>
+</body>
+</html>

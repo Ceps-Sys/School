@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | Operator Bitwise</title>
+</head>
+<body>
+    <p>operator bitwise merupakan operator yanhg digunakandi operasi bit (binary) pada nilai-nilai bilangan bulat. operator bitwise terdiri atas:</p>
+    <ul>
+        <li>Bitwise AND (&)</li>
+        <li>Bitwise OR (|)</li>
+        <li>Bitwise XOR (^)</li>
+        <li>Bitwise NOT (~)</li>
+        <li>Bitwise Left Shift (<<)</li>
+        <li>Bitwise Right Shift (>>)</li>
+        <li>Bitwise Unsigned Right Shift (>>>)</li>
+    </ul>
+    <p>Operator ini merupakan binner jadi jika ada variabel di isi dengan desimal maka dia akan di olah menjadi binner</p>
+    <p>Operartor ini berlaku unntuk tipe data int,long,short,char dan byte</p>
+
+    <script>
+        var a = 5;//0101
+        var b = 3;//0011
+        document.writeln("Diketahui nilai a=" +a+ "dalam binner adalah" + a.toString(2).padStart(4, '0') + "<br>");
+        document.writeln("Diketahui nilai b=" +b+ "dalam binner adalah" + b.toString(2).padStart(4, '0') + "<br><br>");
+
+        //Bitwise AND
+        var hasil = a & b;
+        document.writeln("Hasil dari  : " + a + "&" + b + "hasil binnernya adalah" + hasil + "dalam 4 bit binner adalah "+ hasil.toString(2).padStart(4, '0') + "<br><br>");
+
+        //Bitwise OR
+        hasil = a | b;
+        document.writeln("Hasil dari  : " + a + "|" + b + "hasil binnernya adalah" + hasil + "dalam 4 bit binner adalah "+ hasil.toString(2).padStart(4, '0') + "<br><br>");
+
+        //Bitwise XOR
+        hasil = a ^ b;
+        document.writeln("Hasil dari  : " + a + "^" + b + "hasil binnernya adalah" + hasil + "dalam 4 bit binner adalah "+ hasil.toString(2).padStart(4, '0') + "<br><br>");
+
+        //Bitwise NOT
+        hasil = ~a;
+        document.writeln("Hasil dari  : ~" + a + "hasil binnernya adalah" + hasil + "dalam 4 bit binner adalah "+ hasil.toString(2).padStart(4, '0') + "<br><br>");
+
+        //Bitwise Left Shift
+        hasil = a << 1;
+        document.writeln("Hasil dari  : " + a + "<< 1  hasil binnernya adalah" + hasil + "dalam 4 bit binner adalah "+ hasil.toString(2).padStart(4, '0') + "<br><br>");
+
+        //Bitwise Right Shift
+        hasil = a >> 1;
+        document.writeln("Hasil dari  : " + a + ">>  1  hasil binnernya adalah" + hasil + "dalam 4 bit binner adalah "+ hasil.toString(2).padStart(4, '0') + "<br><br>");
+
+        //Bitwise Unsigned Right Shift
+        hasil = a >>> 1;
+        document.writeln("Hasil dari  : " + a + ">>> 1  hasil binnernya adalah" + hasil + "dalam 4 bit binner adalah "+ hasil.toString(2).padStart(4, '0') + "<br><br>");
+    </script>
+
+</body>
+</html>

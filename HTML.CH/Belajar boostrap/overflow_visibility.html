@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow & Visibility - Cepi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .kotak-contoh {
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 2px solid #0d6efd;
+            margin-bottom: 20px;
+        }
+        .isi-panjang { width: 300px; background-color: #ffc107; padding: 5px; }
+    </style>
+</head>
+<body class="p-5">
+
+    <div class="container">
+        <h2 class="mb-4 text-center">Overflow & Visibility</h2>
+
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h6>Overflow Auto</h6>
+                <div class="kotak-contoh overflow-auto mx-auto">
+                    <div class="isi-panjang">Teks ini sangat panjang ke samping dan scroll muncul otomatis...</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h6>Overflow Hidden</h6>
+                <div class="kotak-contoh overflow-hidden mx-auto">
+                    <div class="isi-panjang">Teks 
+                     yang keluar kotak bakal dipotong/hilang.</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h6>Overflow Scroll</h6>
+                <div class="kotak-contoh overflow-scroll mx-auto">
+                    <div class="isi-panjang">Scrollbar selalu ada di sini bawah dan samoping.</div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row text-center mt-4">
+            <h4 class="mb-3">Visibility Test</h4>
+            <div class="col-md-6 border p-3">
+                <p>Elemen di bawah ini <strong>Invisible</strong>:</p>
+                <div class="invisible bg-danger p-2 text-white"> Tak Terlihat Tapi Tetap memakan tempat </div>
+                <p>(Ada ruang kosong di atas ini ^)</p>
+            </div>
+            <div class="col-md-6 border p-3">
+                <p>Elemen di bawah ini <strong>Visible</strong>:</p>
+                <div class="visible bg-success p-2 text-white">Terlihat Jelas</div>
+                <p>(kitu w)</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

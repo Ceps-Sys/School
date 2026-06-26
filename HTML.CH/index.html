@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tugas gambar dan musik</title>
+</head>
+<!-- Audio element untuk memutar musik dengan loop -->
+<audio id="backgroundAudio1" loop>
+    <source src="HTML.CH/music/Akaza Love Theme.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+</audio>
+
+<audio id="backgroundAudio2" loop>
+    <source src="HTML.CH/music/ncs.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+</audio>
+<!-- Container utama dengan tinggi 100% viewport -->
+<div style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <!-- Gambar dengan ukuran responsif -->
+    <img src="HTML.CH/gambar/cepi.png" alt="Cepi X RPL" style="max-width: 90%; max-height: 70vh; object-fit: contain#333;">
+
+    <!-- Container untuk tombol -->
+    <div style="margin-top: 20px;">
+        <!-- Tombol PTS Ganjil -->
+        <button onclick="window.location.href='HTML.CH/html/Pts.html';" style="
+                position: absolute;
+                left: 20%;
+                top: 83%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            PTS Ganjil
+        </button>
+
+        <!-- Tombol PTS Teori -->
+        <button id="audioToggle" onclick="toggleAudio()" style="
+                position: absolute;
+                right: 20%;
+                top: 83%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            Putar Musik
+        </button>
+    </div>
+    <div style="margin-top: 20px;">
+        <!-- Tombol CSS -->
+        <button onclick="window.location.href='HTML.CH/dasar-dasar css/';" style="
+                position: absolute;
+                left: 20%;
+                top: 90%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            CSS dasar
+        </button>
+         <div style="margin-top: 20px;">
+        <!-- Tombol UKK -->
+        <button onclick="window.location.href='HTML.CH/dasar-dasar css/UKK.html';" style="
+                position: absolute;
+                right: 20%;
+                top: 90%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            UKK
+        </button>
+        <div>
+              <div style="margin-top: 20px;">
+        <!-- Tombol Boostrap -->
+        <button onclick="window.location.href='HTML.CH/boostrap v5.3/';" style="
+                position: absolute;
+                right: 45%;
+                top: 83%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            Boostrap v5.3
+        </button>
+                <!-- Tombol JavaScript-->
+        <button onclick="window.location.href='HTML.CH/javascript/';" style="
+                position: absolute;
+                right: 31%;
+                top: 83%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            JavaScript 
+        </button>
+                    <!-- Tombol PHP dasar-->
+        <button onclick="window.location.href='PHP dasar/materi utama/';" style="
+                position: absolute;
+                left: 31%;
+                top: 83%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            PHP dasar
+    </button>
+
+                      <!-- Tombol flowchart-->
+        <button onclick="window.location.href='flowchart/';" style="
+                position: absolute;
+                left: 31%;
+                top: 90%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            flowchart
+    </button>
+
+                 <!-- Tombol template php-->
+        <button onclick="window.location.href='PHP dasar/index.html';" style="
+                position: absolute;
+                right: 31%;
+                top: 90%;
+                padding: 12px 24px; 
+                background-color: #2c3e50; 
+                color: white; 
+                border: none; 
+                font-size: 16px;
+                margin: 0 10px;
+                cursor: pointer;
+            ">
+            template
+    </button>
+        <div>
+            <font size="3" color="#e67e22">
+                Memutar: <span id="nowPlaying">-</span>
+            </font>
+        </div>
+    </div>
+
+    <!-- Skrip JavaScript untuk mengontrol audio -->
+    <script>
+        var audio1 = document.getElementById('backgroundAudio1');
+        var audio2 = document.getElementById('backgroundAudio2');
+        var audioToggle = document.getElementById('audioToggle');
+        var nowPlaying = document.getElementById('nowPlaying');
+        var musicState = 0; // 0: tidak diputar, 1: lagu pertama, 2: lagu kedua
+
+        // Set volume agar tidak terlalu keras
+        audio1.volume = 0.7;
+        audio2.volume = 0.7;
+
+        // Fungsi untuk menghentikan semua audio
+        function stopAllAudio() {
+            audio1.pause();
+            audio1.currentTime = 0;
+            audio2.pause();
+            audio2.currentTime = 0;
+        }
+
+        function toggleAudio() {
+            if (musicState === 0) {
+                // Putar lagu pertama dengan loop
+                stopAllAudio();
+                audio1.play()
+                    .then(function () {
+                        musicState = 1;
+                        audioToggle.textContent = 'Putar Music Berikut';
+                        audioToggle.style.backgroundColor = '#c0392b';
+                        audioToggle.style.color = '#ecf0f1';
+                        nowPlaying.textContent = 'akaza love theme';
+                    })
+                    .catch(function (error) {
+                        console.log('Failed to play first audio: ', error);
+                        nowPlaying.textContent = 'Error: Tidak dapat memutar musik';
+                    });
+            } else if (musicState === 1) {
+                // Putar lagu kedua dengan loop
+                stopAllAudio();
+                audio2.play()
+                    .then(function () {
+                        musicState = 2;
+                        audioToggle.textContent = 'Stop Music';
+                        nowPlaying.textContent = 'ncs';
+                    })
+                    .catch(function (error) {
+                        console.log('Failed to play second audio: ', error);
+                        nowPlaying.textContent = 'Error: Tidak dapat memutar musik';
+                    });
+            } else {
+                // Stop semua musik
+                stopAllAudio();
+                musicState = 0;
+                audioToggle.textContent = 'Putar Music';
+                audioToggle.style.backgroundColor = '#e67e22';
+                audioToggle.style.color = '#2c3e50';
+                nowPlaying.textContent = '-';
+            }
+        }
+    </script>
+
+</html>

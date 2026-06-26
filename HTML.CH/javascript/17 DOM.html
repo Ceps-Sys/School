@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM JavaScript (Detail)</title>
+    <style>
+        /* Beberapa style dasar untuk bahan uji coba DOM nanti */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .box {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">Selamat Datang di Kelas DOM</h1>
+    <p class="description">Ini adalah paragraf pertama yang akan kita ubah lewat DOM.</p>
+    <p class="description">Ini adalah paragraf kedua, juga memiliki class yang sama.</p>
+
+    <div id="my-box" class="box">Kotak Uji Coba</div>
+    <button id="btn-change">Klik untuk Ubah Kotak</button>
+
+    <h3>Daftar Tugas Hari Ini:</h3>
+    <ul>
+        <li class="task-item">Belajar Array</li>
+        <li class="task-item">Belajar Function</li>
+        <li class="task-item">Belajar DOM</li>
+    </ul>
+
+
+    <script>
+        /* APA ITU DOM?
+           DOM adalah API (Application Programming Interface) yang disediakan oleh browser. 
+           Saat halaman HTML dimuat, browser otomatis mengubah seluruh kode HTML tersebut 
+           menjadi "Object Tree" (Pohon Objek). 
+           
+           Dengan DOM, JavaScript punya kekuatan untuk:
+           1. Mengambil/memilih elemen HTML.
+           2. Mengubah teks atau isi HTML.
+           3. Mengubah gaya tampilan (CSS).
+           4. Merespon aksi user (seperti klik tombol, ketik keyboard, dll).
+        */
+
+        console.log("=== ISI OBJECT DOCUMENT ===");
+        console.dir(document); // Membongkar seluruh isi objek global 'document' di console
+
+
+        // -------------------------------------------------------------------------
+        // 1. TEKNIK SELEKSI ELEMEN (Cara Mengambil Elemen HTML)
+        // -------------------------------------------------------------------------
+        console.log("\n--- 1. Proses Seleksi Elemen ---");
+
+        // A. Berdasarkan ID (Menghasilkan 1 elemen tunggal)
+        const titleElement = document.getElementById("main-title");
+        console.log("Seleksi ID:", titleElement);
+
+        // B. Berdasarkan Class Name (Menghasilkan kumpulan elemen / HTMLCollection)
+        const paragraphs = document.getElementsByClassName("description");
+        console.log("Seleksi Class (Banyak):", paragraphs);
+
+        // C. Menggunakan Query Selector (Modern & Fleksibel - Mengambil 1 data pertama)
+        const firstTask = document.querySelector(".task-item"); // Pakai titik (.) untuk class
+        const boxElement = document.querySelector("#my-box");     // Pakai pagar (#) untuk id
+        console.log("QuerySelector Class:", firstTask);
+
+        // D. Menggunakan Query Selector All (Mengambil SEMUA data yang cocok sebagai NodeList)
+        const allTasks = document.querySelectorAll(".task-item");
+        console.log("QuerySelectorAll (Semua list):", allTasks);
+
+
+        // -------------------------------------------------------------------------
+        // 2. MANIPULASI KONTEN & TEKS (Mengubah Isi Elemen)
+        // -------------------------------------------------------------------------
+        
+        // Mengubah teks di dalam Judul Utama (id="main-title")
+        titleElement.textContent = "DOM Berhasil Diubah Lewat JavaScript!";
+        
+        // Mengubah isi paragraf pertama (indeks 0) dengan tag HTML baru
+        paragraphs[0].innerHTML = "Teks ini diubah menggunakan <u>innerHTML</u>.";
+
+
+        // -------------------------------------------------------------------------
+        // 3. MANIPULASI STYLES / CSS (Mengubah Tampilan)
+        // -------------------------------------------------------------------------
+        
+        // Mengubah style CSS langsung (Inline Style) via properti .style
+        // Catatan: Di JavaScript, properti CSS menggunakan gaya camelCase (misal: backgroundColor)
+        titleElement.style.color = "darkblue";
+        titleElement.style.backgroundColor = "#f0f0f0";
+        titleElement.style.padding = "10px";
+
+        // Mengubah gaya dengan menambah/menghapus Class CSS yang sudah ada di <style>
+        paragraphs[1].classList.add("highlight"); // Paragraf kedua otomatis jadi kuning & tebal
+
+
+        // -------------------------------------------------------------------------
+        // 4. EVENT LISTENER (Merespon Aksi Klik User)
+        // -------------------------------------------------------------------------
+        
+        // Kita ambil tombol dan kotak yang sudah kita buat di HTML tadi
+        const button = document.getElementById("btn-change");
+
+        // Memasang fungsi pengintai (Event Listener) untuk mendeteksi klik pada tombol
+        button.addEventListener("click", function() {
+            // Tugas yang dijalankan saat tombol DIKLIK:
+            boxElement.textContent = "Kotak telah diklik dan berubah warna!";
+            boxElement.style.backgroundColor = "lightgreen";
+            boxElement.style.borderColor = "green";
+            boxElement.style.transform = "scale(1.1)"; // Membuat kotak sedikit membesar
+            boxElement.style.transition = "all 0.3s";   // Memberikan efek animasi smooth
+            
+            console.log("Tombol 'Change' berhasil diklik oleh user!");
+        });
+
+
+        // -------------------------------------------------------------------------
+        // 5. NAVIGASI NODE / RELASI ELEMEN (Melihat Hubungan Keluarga Elemen)
+        // -------------------------------------------------------------------------
+        console.log("\n--- 5. Navigasi Relasi Elemen ---");
+        
+        const listContainer = document.querySelector("ul");
+        
+        // Melihat anak-anak (children) dari tag <ul>
+        console.log("Anak dari <ul>:", listContainer.children);
+        
+        // Melihat orang tua (parent) dari tag <ul>
+        console.log("Orang tua dari <ul>:", listContainer.parentElement); // Harusnya mencetak tag <body>
+
+    </script>
+</body>
+</html>

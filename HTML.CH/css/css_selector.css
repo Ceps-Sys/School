@@ -1,0 +1,29 @@
+/*contoh penggunaan CSS selector tipe Elemen HTML*/
+h1 {
+    color: blue;
+}
+ul {
+    color: green;
+}
+
+ol {
+    color: red;
+}
+
+/*cara pegunaan selector id*/
+#paragraf1 { 
+    color: purple;
+}
+
+/*cara pegunaan selector class*/
+.paragraf2 { 
+    color: rgb(55, 0, 255);
+}
+
+.cetak-tebal {
+    font-weight: bold;
+}
+CARI ELEMENT HTML p YANG MEMPUNYAI CLASS cetak-tebal
+p.cetak-tebal {
+    font-size: 15px;
+}

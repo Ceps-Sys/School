@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | Javascript Form Dialog</title>
+</head>
+<body>
+    <h4>Ada dua cara dalam mengambil input</h4>
+    <ol>
+        <li>Menggunakan form</li>
+        <li>Menggunakan jendela dialog</li>
+    </ol>
+    <h4>Untuk materi dasar kita akan mempelajari metode kedua yaitu menggunakan jendela dialog</h4>
+
+    <h4>Adapun untuk Jendela Dialog terdiri dari</h4>
+    <ol type="a">
+        <li>Metoda Dialog Alert</li>
+        <li>Metoda Dialog Confirm</li>
+        <li>Metoda Dialog Prompt</li>
+    </ol>
+    <h4>Silahkan pelajari skrip masing-masing metoda nya</h4>
+    <hr>
+
+    <h4>Ini button metoda Alert menggunakan event</h4>
+    <button onClick="alert('Hasil ketika anda melakukan Klik Tombol Alert-1')">Tombol Alert-1</button>
+    <hr>
+
+    <!-- 
+    Kapan Waktu yang Tepat Menggunakan Alert, Confirm, dan Prompt?
+    Saat kita hanya ingin menampilkan informasi saja, maka gunakan alert().
+    Saat kita ingin jawaban konfirmasi dari pengguna, maka gunakan confirm().
+    Apabila kita ingin mengambil data teks dari pengguna, maka gunakan prompt().
+    -->
+
+    <script>
+        // 1. Metoda Dialog Alert
+        window.alert("Iini hasil menggunakan metoda dialog alert");
+        
+        // objek windows bersifat global, maka kita bisa tidak perlu menulisnya, seperti berikut
+        alert("Ini juga hasil menggunakan dialog alert")
+
+        // Cara menampilkan dialog alert dengan event tertentu, misalkan onClick
+        // Buat button dengan nama Tombol Alert-1 di body html, baru buat Js nya, bisa langsung di HTML, lihat skrip bagian button di html
+
+
+        // 2. Metoda Dialog Confirm
+        // metoda confirm digunakan untuk melakuka konfirmasi dalam melakukan tindakan tertentu
+        // buat dulu variabel
+        var testKonfirmasi = confirm("Apakah kamu yakin akan mengunjungi link ini?");
+        
+        // Lalu buat logika percabangan
+        if(testKonfirmasi) {
+            window.location="https://smkmvp.sch.id/";
+        } else {
+            document.writeln("Gak jadi, tetap di sini aja");
+            document.writeln("<hr>");
+        }
+
+
+        // 3. Metoda promp
+        // buat dulu variabel
+        var namaLengkap = prompt("Siapakah nama lengkap kamu?");
+        document.writeln("Hallo " + namaLengkap + "<br>");
+        
+    </script>
+</body>
+</html>

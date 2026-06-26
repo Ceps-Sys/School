@@ -1,0 +1,49 @@
+.piu:link {
+    color:orange;
+}
+
+.piu:hover {
+    color: green;
+    font-size: 20pt;
+    font-family: Arial;
+}
+
+.piu:active {
+    color: purple;
+    font-style: italic;
+}
+
+.piu:visited {
+    color: red;
+}
+
+/*penggunaan berdasarkan posisi-1*/
+
+li:first-child a {
+    color: red;
+}
+
+li:last-child a {
+    color: magenta;
+}
+
+li:nth-child(3n-1) a {
+    color: green;
+}
+
+li:nth-child(odd) a {
+    color: cyan;
+}
+
+li:nth-child(even) a {
+    color: gold;
+}
+/*Element Tidak Berurutan/tingkat*/
+
+p:first-of-type {
+    color: blue;
+}
+
+p:last-of-type {
+    color: brown;
+}

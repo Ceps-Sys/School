@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="../css/css_animasi_login.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-form">
+      <div class="tab-menu">
+        <button class="tab active" onclick="showForm('login')">Login</button>
+        <button class="tab" onclick="showForm('register')">Register</button>
+      </div>
+
+      <!-- Form Login -->
+      <form id="loginForm">
+        <h2>Login</h2>
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" placeholder="Masukkan username">
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Masukkan password">
+        </div>
+        <a href="14 css web interaktif.html" target="_blank" class="btn-login">Masuk</a>
+      </form>
+
+      <!-- Form Register -->
+      <form id="registerForm" style="display: none;">
+        <h2>Register</h2>
+        <div class="input-group">
+          <label>Nama Lengkap</label>
+          <input type="text" placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" placeholder="Masukkan username">
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Buat password">
+        </div>
+        <a href="14 css web interaktif.html" target="_blank" class="btn-login">Daftar</a>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showForm(form) {
+      // Ubah tab aktif
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelector(`.tab-menu .tab:nth-child(${form === 'login' ? 1 : 2})`).classList.add('active');
+
+      // Tampilkan form
+      document.getElementById('loginForm').style.display = form === 'login' ? 'block' : 'none';
+      document.getElementById('registerForm').style.display = form === 'register' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>

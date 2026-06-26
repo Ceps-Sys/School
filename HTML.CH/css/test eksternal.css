@@ -1,0 +1,19 @@
+h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: aqua
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: aquamarine;
+        }
+
+        ul {
+            color: rgb(12, 71, 110);
+        }
+
+        h3{
+            color: cadetblue;
+            font-family: fantasy;
+        }

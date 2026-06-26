@@ -1,0 +1,141 @@
+/* Mengatur style dasar untuk body dan membuat background biru */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: blue; /* Warna biru */
+}
+
+/* Container yang memuat form login, ditengah-tengah layar */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation: fadeIn 1s ease-in-out; /* Animasi fade in */
+}
+
+/* Form login, desain sederhana */
+.login-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  animation: slideUp 1s ease-out; /* Animasi slide up */
+}
+
+/* Heading form, teks login */
+.login-form h2 {
+  color: #e74c3c; /* Warna merah */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Menata input fields */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Efek saat input fokus */
+.input-group input:focus {
+  border-color: #3498db; /* Border biru */
+}
+
+/* Tombol submit */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e74c3c; /* Warna merah */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efek hover pada tombol */
+button:hover {
+  background-color: #c0392b; /* Warna merah lebih gelap saat hover */
+}
+
+/* Animasi fadeIn untuk container */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animasi slideUp untuk form */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Tab menu */
+.tab-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  font-size: 16px;
+  border-radius: 5px 5px 0 0;
+  transition: background 0.3s;
+}
+
+.tab.active {
+  background-color: red;
+  color: white;
+}
+
+.btn-login {
+  display: block;
+  text-align: center;
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.btn-login:hover {
+  background-color: #c0392b;
+}

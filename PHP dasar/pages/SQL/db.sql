@@ -1,0 +1,9 @@
+CREATE DATABASE db_belajar;
+USE db_belajar;
+
+CREATE TABLE siswa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    nis VARCHAR(20) NOT NULL,
+    jurusan VARCHAR(50) NOT NULL
+);

@@ -1,0 +1,7 @@
+   body { font-family: Arial; padding: 20px; }
+    .box {
+      width: 150px;
+      height: 150px;
+      background: skyblue;
+      margin: 10px 0;
+    }

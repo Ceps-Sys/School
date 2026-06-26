@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | Operator Relasi</title>
+</head>
+<body>
+    <p>Operator perbandingan/relasi terdiri dari:</p>
+    <ul>
+        <li>== (sama dengan)</li>
+        <li>!= (tidak sama dengan)</li>
+        <li>=== (identik/sama persis)</li>
+        <li>!== (tidak identik/tidak sama persis)</li>
+        <li>> (lebih besar dari)</li>
+        <li>< (lebih kecil dari)</li>
+        <li>>= (lebih besar atau sama dengan)</li>
+        <li><= (lebih kecil atau sama dengan)</li>
+    </ul>
+
+    <script>
+        var a=10;
+        var b=5;
+        var c=10;
+        document.writeln("Nilai awal a=" +a+ "<br>");
+        document.writeln("Nilai awal b=" +b+ "<br>");
+        document.writeln("Nilai awal c=" +c+ "<br>");
+
+        //sama dengan
+        document.writeln("Hasil a == b = " + (a == b) + "<br>"); 
+        document.writeln("Hasil a == c = " + (a == c) + "<br>");
+
+        //tidak sama dengan
+        document.writeln("Hasil a != b = " + (a != b) + "<br>");
+        document.writeln("Hasil a != c = " + (a != c) + "<br>");
+
+        //sama persis
+        document.writeln("Hasil a === b = " + (a === b) + "<br>");
+        document.writeln("Hasil a === c = " + (a === c) + "<br>");
+
+        //tidak sama persis
+        document.writeln("Hasil a !== b = " + (a !== b) + "<br>");
+        document.writeln("Hasil a !== c = " + (a !== c) + "<br>");
+
+        //lebih besar dari
+        document.writeln("Hasil a > b = " + (a > b) + "<br>");
+        document.writeln("Hasil a > c = " + (a > c) + "<br>");
+
+        //lebih kecil dari
+        document.writeln("Hasil a < b = " + (a < b) +   "<br>");
+        document.writeln("Hasil a < c = " + (a < c) + "<br>");
+
+        //lebih besar atau sama dengan
+        document.writeln("Hasil a >= b = " + (a >= b) + "<br>");
+        document.writeln("Hasil a >= c = " + (a >= c) + "<br>");
+
+        //lebih kecil atau sama dengan
+        document.writeln("Hasil a <= b = " + (a <= b) + "<br>");
+        document.writeln("Hasil a <= c = " + (a <= c) + "<br>");
+
+
+        //tambahan-1,Operator perbandinga juga bisa digunakan untuk membandingkan string
+        var str1 = "Hello";
+        var str2 = "World";
+        var str3 = "Hello";
+        document.writeln("<br>Nilai awal str1=" +str1+ "<br>");
+        document.writeln("Nilai awal str2=" +str2+ "<br>");
+        document.writeln("Nilai awal str3=" +str3+ "<br>");
+        document.writeln("Hasil str1 == str2 = " + (str1 == str2) + "<br>");
+        document.writeln("Hasil str1 == str3 = " + (str1 == str3) + "<br>");
+
+        //tambahan-2,Operator perbandingan juga bisa digunakan untuk membandingkan boolean
+        var bool1 = true;
+        var bool2 = false;
+        document.writeln("<br>Nilai awal bool1=" +bool1+ "<br>");
+        document.writeln("Nilai awal bool2=" +bool2+ "<br>");
+        document.writeln("Hasil bool1 == bool2 = " + (bool1 == bool2) + "<br>");
+        document.writeln("Hasil bool1 == true = " + (bool1 == true) + "<br>");
+
+        //tambahan-3,Operator perbandingan juga bisa digunakan untuk membandingkan nilai null dan undefined
+        var nullValue = null;
+        var undefinedValue;
+        document.writeln("<br>Nilai awal nullValue=" +nullValue+ "<br>");
+        document.writeln("Nilai awal undefinedValue=" +undefinedValue+ "<br>"); 
+        document.writeln("Hasil nullValue == undefinedValue = " + (nullValue == undefinedValue) + "<br>");
+        document.writeln("Hasil nullValue === undefinedValue = " + (nullValue === undefinedValue) + "<br>");
+
+        //tambahan-4,dua simbol == dengan tiga simbol === memiliki perbedaan yang sangat penting dalam javascript, operator == melakukan perbandingan dengan konversi tipe data jika di perlukan, sedangkan operator === melakukan perbandingan tanpa konversi tipe data,sehingga lebih ketat dalam membndingkan nilai dan tipe data
+        var num = 5;
+        var strNum = "5";
+        document.writeln("<br>Nilai awal num=" +num+ "<br>");
+        document.writeln("Nilai awal strNum=" +strNum+ "<br>");
+        document.writeln("Hasil num == strNum = " + (num == strNum) + "<br>"); // true karena operator == melakukan konversi tipe data
+        document.writeln("Hasil num === strNum = " + (num === strNum) + "<br>"); // false karena operator === tidak melakukan konversi tipe data
+    </script>
+</body>
+</html>

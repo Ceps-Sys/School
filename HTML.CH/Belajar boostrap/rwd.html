@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPL Meme Gallery Responsif + Responsif| Cepi </title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body { background-color: #121212; color: #e0e0e0; padding-bottom: 80px; }
+        .hero-section { background: linear-gradient(135deg, #0d6efd, #0dcaf0); padding: 60px 0; shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        
+        /* Mengatur agar gambar meme di kartu ukurannya seragam & tidak gepeng */
+        .card-img-top {
+            height: 250px;
+            object-fit: contain; 
+            background-color: #212529;
+            padding: 10px;
+        }
+        
+        /* Efek hover */
+        .meme-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+        .meme-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            shadow: 0 10px 20px rgba(13, 110, 253, 0.5);
+            border-color: #0dcaf0;
+        }
+        
+        /* Styling tambahan untuk Modal */
+        .modal-content { background-color: #1a1a1a; border: 2px solid #0dcaf0; }
+        .modal-header { border-bottom: 1px solid #333; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#">KUARSH_DEV <span class="badge bg-warning text-dark fs-6 ms-1">X-RPL</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Meme Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center text-white mb-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Life of an RPL Student</h1>
+            <p class="lead">Kumpulan meme Ekspektasi vs Realita jadi Programmer ala Cepi Handani.</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            
+               <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white meme-card shadow" data-bs-toggle="modal" data-bs-target="#modalMeme1">
+                    <img src="../gambar/salammeme.png" class="card-img-top p-2" alt="Meme 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Programmer Evolution</h5>
+                        <p class="card-text">1 hari cukup lah...(2minggu kemudian)</p>
+                    </div>
+                </div>
+            </div>
+
+               <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white meme-card shadow" data-bs-toggle="modal" data-bs-target="#modalMeme2">
+                    <img src="../gambar/tewas.jpg" class="card-img-top p-2" alt="Meme 2">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Expectation vs Reality</h5>
+                        <p class="card-text">ngoding di yt kaya tinggal ketik terus beres eh ternyata tak seindah itu.</p>
+                    </div>
+                </div>
+            </div>
+
+           <div class="col-md-4">
+                <div class="card h-100 bg-secondary text-white meme-card shadow" data-bs-toggle="modal" data-bs-target="#modalMeme3">
+                    <img src="../gambar/58459053_9299765.jpg" class="card-img-top p-2" alt="Meme 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">The Debugging Life</h5>
+                        <p class="card-text">1 error selesai 100 lain muncul wkwkkw</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+ <div class="modal fade" id="modalMeme1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border-info">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info">Zoom View: Evolution</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="../gambar/salammeme.png" class="img-fluid" alt="Zoom 1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMeme2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border-info">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info">Zoom View: Reality</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="../gambar/tewas.jpg" class="img-fluid" alt="Zoom 2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMeme3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border-info">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info">Zoom View: Debugging</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="../gambar/58459053_9299765.jpg" class="img-fluid" alt="Zoom 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 fixed-bottom shadow-lg border-top border-secondary">
+        <small>&copy; 2026 Cepi Handani - SMK Student & Meme Enthusiast</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

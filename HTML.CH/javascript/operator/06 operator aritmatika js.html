@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cepi Handani | Operator Aritmatika</title>
+</head>
+<body>
+    <h4>Apa itu Operator?</h4>
+    <p>Operator adalah simbol yang digunakan untuk melakukan operasi pada suatu nilai atau variabel.</p>
+    <p>Operator dalam pemrograman terbagi menjadi 6 jenis:</p>
+    <ol>
+        <li>Operator Aritmatika;</li>
+        <li>Operator penugasan (Assigment);</li>
+        <li>Operator Relasi;</li>
+        <li>Operator Logika;</li>
+        <li>Operator Bitwise;</li>
+        <li>Operator Ternary;</li>
+    </ol>
+    <p>Operator wajib ada di setiap bahasa pemrograman.Ke 6 jenis operator di atas harus kamu pahami,</p>
+
+    <script>
+        var a = 25;
+        var b = 10;
+        var c = 5;
+
+        //penjumlahan
+        hasil = a+b+c;
+        document.writeln("Hasil penjumlahan a+b+c = " + hasil + "<br>");
+
+        //pengurangan
+        hasil = a-b-c;
+        document.writeln("Hasil pengurangan a-b-c = " + hasil + "<br>");
+
+        //perkalian
+        hasil = a*b*c;
+        document.writeln("Hasil perkalian a*b*c = " + hasil + "<br>");
+
+        //pembagian
+        hasil = a/b/c;
+        document.writeln("Hasil pembagian a/b/c = " + hasil + "<br>");
+
+        //modulus
+        hasil = a%b;
+        document.writeln("Hasil modulus a%b = " + hasil + "<br>");
+        document.writeln("Hasil modulus a%c = " + (a%c) + "<br>");
+        document.writeln("Hasil modulus b%c = " + (b%c) + "<br>");
+
+        //catatan,operatus penggabungan teks/string adalah operator +,bukan operator aritmatika
+        var a = "10";
+        var b = "2";
+        document.writeln("Hasil penggabungan teks a+b = " + (a+b) + "<br>");
+        //coba perhatikan hasilnya bukan 12,melainkan 102,karena operator + di sini berfungsi untuk menggabungkan teks a dan b, bukan untuk menjumlahkan angka
+    </script>
+</body>
+</html>

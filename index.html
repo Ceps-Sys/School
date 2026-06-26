@@ -1,0 +1,745 @@
+<!-- <?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "db_belajar";
+
+$koneksi = mysqli_connect($host, $user, $pass, $db);
+
+if (!$koneksi) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+
+$sql_read = "SELECT * FROM siswa ORDER BY id DESC";
+$q_read   = mysqli_query($koneksi, $sql_read);
+$nomor    = 1;
+?> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Landing Page| Cepi Handani</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="./PHP dasar/assets/img/favicon.png" rel="icon">
+  <link href="./PHP dasar/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="./PHP dasar/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./PHP dasar/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./PHP dasar/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="./PHP dasar/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./PHP dasar/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="./PHP dasar/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: EasyFolio
+  * Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
+  * Updated: Feb 21 2025 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">KuarshXion</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li class="dropdown"><a href="#"><span>Tugas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Web Untuk<br>Belajar Mandiri</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="https://www.w3schools.com/">W3SCHOOLS</a></li>
+                  <li><a href="https://www.codecademy.com/?g_network=g&g_productchannel=&g_adid=624951457618&g_locinterest=&g_keyword=codecademy&g_acctid=243-039-7011&g_adtype=&g_keywordid=kwd-41065460761&g_ifcreative=&g_campaign=account&g_locphysical=9120583&g_adgroupid=70492864474&g_productid=&g_source={sourceid}&g_merchantid=&g_placement=&g_partition=&g_campaignid=1726903838&g_ifproduct=&utm_id=t_kwd-41065460761:ag_70492864474:cp_1726903838:n_g:d_c&utm_source=google&utm_medium=paid-search&utm_term=codecademy&utm_campaign=INTL_Brand_Exact&utm_content=624951457618&g_adtype=search&g_acctid=243-039-7011&gad_source=1&gad_campaignid=1726903838&gbraid=0AAAAAon8KZF5FMUbyVTnVkuYnWPL4PsZh&gclid=Cj0KCQiAwYrNBhDcARIsAGo3u32TNLSsoRjEiH_l_hKXB77bS2p7V6AoxqJq9YLHeyzUrjmkJYwsP60aAsaiEALw_wcB">CodeCademy</a></li>
+                  <li><a href="https://www.freecodecamp.org/">freecodecamp</a></li>
+                  <li><a href="https://www.learncpp.com/">learncpp</a></li>
+                </ul>
+              </li>
+              <li><a href="HTML.CH/html/">HTML</a></li>
+              <li><a href="HTML.CH/css/">CSS</a></li>
+              <li><a href="HTML.CH/javascript/">JS</a></li>
+              <li><a href="HTML.CH/boostrap v5.3/">BOOSTRAP</a></li>
+              <li><a href="./PHP dasar/">PHP</a></li>
+               <li><a href="./PHP dasar/inc/register.php">ADMIN</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+  <section id="hero" class="hero section" style="padding: 120px 0 80px 0; background: #fff;">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      
+      <div class="col-lg-5 text-center text-lg-start">
+        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: #2d3e50; line-height: 1.2;">KuarshXion</h1>
+        <p style="font-size: 1.2rem; color: #6c757d; margin: 15px 0 30px 0;">progress ku mengapai cita-cita!</p>
+        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+          <a href="#portfolio" class="btn" style="background: #e87445; color: #fff; padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: 0.3s;">Pekerjaan</a>
+          <a href="#contact" class="btn" style="border: 2px solid #e87445; color: #e87445; padding: 12px 30px; border-radius: 50px; font-weight: 600;">Contact</a>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div style="background: #1e1e1e; border-radius: 20px; padding: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.15); font-family: 'Fira Code', monospace; width: 100%; max-width: 600px; margin: 0 auto;">
+          <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+            <div style="width: 12px; height: 12px; background: #ff5f56; border-radius: 50%;"></div>
+            <div style="width: 12px; height: 12px; background: #ffbd2e; border-radius: 50%;"></div>
+            <div style="width: 12px; height: 12px; background: #27c93f; border-radius: 50%;"></div>
+          </div>
+          <code style="color: #dcdcaa; font-size: 15px; line-height: 1.6; display: block;">
+            <span style="color: #569cd6;">class</span> <span style="color: #4ec9b0;">KuarshXion</span> {<br>
+            &nbsp;&nbsp;<span style="color: #dcdcaa;">constructor</span>() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9cdcfe;">this</span>.<span style="color: #9cdcfe;">goal</span> = <span style="color: #ce9178;">"Software Engineer"</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9cdcfe;">this</span>.<span style="color: #9cdcfe;">status</span> = <span style="color: #ce9178;">"Learning"</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Hero Section -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>Seorang pemuda yang bercita-cita menjadi software enginear.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-image">
+              <img src="PHP dasar/assets/img/profile/gua.jpeg" alt="Profile Image" class="img-fluid rounded-4">
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <span class="subtitle">About Me</span>
+
+
+              <p class="lead mb-4">Seorang pemuda berumur 15 tahun yang bercita-cita menjadi Software Enginear dan Developer Indie.</p>
+
+              <p class="mb-4">Informasi lebih lanjut</p>
+
+              <div class="personal-info">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Name</span>
+                      <span class="value">Cepi Handani</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Phone</span>
+                      <span class="value">+62 857-1605-8328</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Age</span>
+                      <span class="value">15 Years</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Email</span>
+                      <span class="value">cepihandani105@gmail.com</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Nationality</span>
+                      <span class="value">Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 skills-animation">
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-box">
+              <h3>HTML</h3>
+              <span class="text-end d-block">75%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-box">
+              <h3>CSS</h3>
+              <span class="text-end d-block">75%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-box">
+              <h3>JavaScript</h3>
+              <span class="text-end d-block">40%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-box">
+              <h3>BoostStrap</h3>
+              <span class="text-end d-block">55%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+   <section id="resume" class="resume section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <div class="title-shape">
+      <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+    </div>
+    <p class="mt-3">
+      <strong>Cepi Handani</strong> | Siswa PPLG (RPL) | 15 Tahun<br>
+      <i class="bi bi-geo-alt"></i> Bandung, Jawa Barat
+    </p>
+  </div><div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="resume-title">Ringkasan Profesional</h3>
+        <div class="resume-item pb-0">
+          <h4>Profil Singkat</h4>
+          <p><em>Siswa kelas 10 SMK yang fokus pada pengembangan perangkat lunak. Memiliki logika pemrograman yang kuat, antusias tinggi dalam dunia teknologi, dan cepat belajar hal baru terutama di bidang Web Development.</em></p>
+          <ul>
+            <li>Bandung, Jawa Barat</li>
+            <li>+62 857-1605-8328</li>
+            <li>cepihandani105@gmail.com</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Pendidikan</h3>
+        <div class="resume-item">
+          <h4>SMK MVP ARS Internasional</h4>
+          <h5>2025 - Sekarang</h5>
+          <p><em>Pengembangan Perangkat Lunak dan Gim (PPLG)</em></p>
+          <p>Fokus pembelajaran pada pengembangan Web (Frontend & Backend), Logika Algoritma, serta pengelolaan Basis Data.</p>
+        </div>
+        <div class="resume-item">
+          <h4>SMPN 1 Cimenyan</h4>
+          <h5>2022 - 2025</h5>
+          <p>Mempelajari materi dasar dan persiapan menuju jenjang kejuruan teknologi.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h3 class="resume-title">Pengalaman & Proyek</h3>
+        <div class="resume-item">
+          <h4>Web Statis: Landing Page Profil</h4>
+          <h5>Proyek Mandiri</h5>
+          <p>Berhasil membangun halaman web statis menggunakan <strong>HTML & CSS</strong> untuk keperluan portofolio pribadi dengan desain responsif.</p>
+        </div>
+        <div class="resume-item">
+          <h4>Logika Program: Aplikasi Kalkulator</h4>
+          <h5>Proyek Latihan</h5>
+          <p>Mengimplementasikan logika matematika ke dalam bahasa pemrograman <strong>C++</strong> untuk membuat aplikasi kalkulator fungsional.</p>
+        </div>
+        
+        <h3 class="resume-title">Organisasi</h3>
+        <div class="resume-item">
+          <h4>Robotik</h4>
+          <h5>Anggota Aktif</h5>
+          <p>Mengembangkan kemampuan dalam logika pemrograman perangkat keras, troubleshooting, dan kerja sama tim dalam merakit sistem otomatis sederhana.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="resume-item">
+          <h4>Skills & Tools</h4>
+          <p>
+            <strong>Coding:</strong> HTML, CSS, Basic JavaScript/PHP, C++ <br>
+            <strong>Tools:</strong> VS Code, Git/GitHub, MS Office <br>
+            <strong>Lainnya:</strong> Troubleshooting PC, Logika Matematika
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="resume-wrapper">
+              <div class="resume-block" data-aos="fade-up">
+
+              <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
+                <h2>My Education</h2>
+                <p class="lead">Awal perjalanan menjadi seorang programmer.</p>
+
+                <div class="timeline">
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-left">
+                      <h4 class="company">SDN 1 CIMENYAN</h4>
+                      <span class="period">2017-2022</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <p class="description">Mempelajari materi materi dasar.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-left">
+                      <h4 class="company">SMPN 1 CIMENYAN</h4>
+                      <span class="period">2022 - 2025</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <p class="description">Mempelajari materi dasar & materi untuk ke jenjang berikutnya.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-left">
+                      <h4 class="company">SMK MVP ARS INTERNASIONAL</h4>
+                      <span class="period">2025-sekarang</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <p class="description">Memasuki jurusan Rekayasa Perangkat Lunak atau sekarang di kenal sebagai Pengembangan Perangkat Lunak dan Gim.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+     <section id="portfolio" class="portfolio section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Klik icon untuk melihat dokumentasi proyek saya.</p>
+  </div>
+
+  <div class="container">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry">
+      
+      <ul class="portfolio-filters isotope-filters">
+        <li data-filter="*" class="filter-active">Semua Proyek</li>
+        <li data-filter=".filter-web">Web Design</li>
+        <li data-filter=".filter-app">Logic Program</li>
+        <li data-filter=".filter-robot">Robotik</li>
+      </ul>
+
+      <div class="row gy-4 isotope-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+          <div style="background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 40px 20px; text-align: center; position: relative;">
+            <i class="bi bi-compass" style="font-size: 3rem; color: #000; display: block; margin-bottom: 10px;"></i>
+            <h4 style="font-size: 1.2rem; font-weight: 700; color: #333;">Landing Page</h4>
+            <p style="font-size: 0.85rem; color: #777;">HTML & CSS Personal Profile</p>
+            
+            <a href="./PHP dasar/assets/img/portfolio/Web.png" class="glightbox" style="position: absolute; inset: 0; z-index: 2;"></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div style="background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 40px 20px; text-align: center; position: relative;">
+            <i class="bi bi-terminal" style="font-size: 3rem; color: #000; display: block; margin-bottom: 10px;"></i>
+            <h4 style="font-size: 1.2rem; font-weight: 700; color: #333;">Mamba Coffee</h4>
+            <p style="font-size: 0.85rem; color: #777;">C++ Cashier System</p>
+            
+            <a href="./PHP dasar/assets/img/portfolio/KasirSederhanaCPP.png" class="glightbox" style="position: absolute; inset: 0; z-index: 2;"></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-robot">
+          <div style="background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 40px 20px; text-align: center; position: relative;">
+            <i class="bi bi-robot" style="font-size: 3rem; color: #000; display: block; margin-bottom: 10px;"></i>
+            <h4 style="font-size: 1.2rem; font-weight: 700; color: #333;">Robotik</h4>
+            <p style="font-size: 0.85rem; color: #777;">Sensor & Mikrokontroler</p>
+            
+            <a href="./PHP dasar/assets/img/portfolio/M.jpeg" class="glightbox" style="position: absolute; inset: 0; z-index: 2;"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- /Portfolio Section -->
+
+      <!-- Section Title -->
+     <section id="services" class="services section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Keahlian & Minat</h2>
+    <div class="title-shape">
+      <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+    </div>
+    <p>Fokus utama yang sedang saya tekuni dalam perjalanan menjadi seorang Software Engineer.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row align-items-center">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <h2 class="fw-bold mb-4 servies-title">Membangun Fondasi di Dunia Teknologi</h2>
+        <p class="mb-4">Sebagai siswa PPLG, saya tidak hanya belajar coding, tapi juga memahami bagaimana teknologi bekerja dari sisi perangkat keras hingga logika program.</p>
+        <a href="#portfolio" class="btn btn-outline-primary">Lihat Proyek Saya</a>
+      </div>
+      <div class="col-lg-8">
+        <div class="row g-4">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <i class="bi bi-code-slash icon"></i>
+              <h3>Web Development</h3>
+              <p>Mempelajari pembuatan website menggunakan HTML, CSS, dan framework modern seperti Bootstrap.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <i class="bi bi-cpu icon"></i>
+              <h3>Logika Algoritma</h3>
+              <p>Mengembangkan cara berpikir sistematis melalui latihan pemrograman C++ dan logika matematika.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item">
+              <i class="bi bi-robot icon"></i>
+              <h3>Robotik</h3>
+              <p>Eksplorasi sensor dan mikrokontroler untuk menciptakan solusi otomasi sederhana.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item">
+              <i class="bi bi-tools icon"></i>
+              <h3>IT Support</h3>
+              <p>Kemampuan dasar dalam troubleshooting hardware komputer dan optimasi sistem operasi.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Services Section -->
+
+
+<!-- <section id="data-siswa" class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Data Siswa Terdaftar</h2>
+        <p>Berikut adalah list data siswa aktif yang bersumber langsung dari database.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="card shadow-sm">
+          <div class="card-header bg-dark text-white fw-bold">
+            Daftar Nama Siswa
+          </div>
+          <div class="card-body">
+            <table class="table table-striped table-hover m-0">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>NIS</th>
+                  <th>Nama Siswa</th>
+                  <th>Jurusan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                // Looping data dari database db_belajar
+                while ($r_read = mysqli_fetch_array($q_read)) {
+                    $nis_siswa  = $r_read['nis'];
+                    $nama_siswa = $r_read['nama'];
+                    $jur_siswa  = $r_read['jurusan'];
+                    ?>
+                    <tr>
+                      <td><?php echo $nomor++; ?></td>
+                      <td><?php echo $nis_siswa; ?></td>
+                      <td><?php echo $nama_siswa; ?></td>
+                      <td><?php echo $jur_siswa; ?></td>
+                    </tr>
+                    <?php
+                }
+                
+                // Kondisi jika database masih kosong
+                if (mysqli_num_rows($q_read) == 0) {
+                    echo "<tr><td colspan='4' class='text-center text-muted py-3'>Belum ada data siswa terdaftar.</td></tr>";
+                }
+                ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+     -->
+    <!-- Faq Section -->
+   <!-- /Faq Section -->
+<section id="faq" class="faq section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Tanya Jawab (FAQ)</h2>
+    <div class="title-shape">
+      <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+    </div>
+    <p>Beberapa hal yang mungkin ingin Anda ketahui tentang perjalanan saya di dunia IT.</p>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-container">
+
+          <div class="faq-item faq-active">
+            <h3>Kenapa memilih jurusan PPLG (RPL)?</h3>
+            <div class="faq-content">
+              <p>Saya tertarik pada teknologi sejak kecil. Memilih PPLG adalah langkah awal saya untuk memahami bagaimana aplikasi dibangun dan bagaimana kode bisa menyelesaikan masalah di dunia nyata.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3>Apa teknologi yang sedang dipelajari saat ini?</h3>
+            <div class="faq-content">
+              <p>Saat ini saya fokus mendalami Frontend Web Development (HTML, CSS, Bootstrap) dan dasar-dasar Backend menggunakan PHP, serta aktif dalam kegiatan Robotik sekolah.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3>Apakah terbuka untuk kolaborasi proyek?</h3>
+            <div class="faq-content">
+              <p>Sangat terbuka! Saya senang belajar hal baru dari orang lain. Jika Anda memiliki ide proyek seru, silakan hubungi saya melalui kontak yang tersedia.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3>Apa rencana karir ke depan?</h3>
+            <div class="faq-content">
+              <p>Target saya adalah menjadi seorang Software Engineer yang kompeten. Saya berencana terus belajar framework modern dan mulai membangun portofolio proyek yang nyata.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="content" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-category mb-3">Contact</div>
+              <p class="lead mb-4">Kontak yang dapat d hubungi.</p>
+
+              <div class="contact-info mt-5">
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-envelope-at me-3"></i>
+                  <span>cepihandani105@gmail.com</span>
+                </div>
+
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-telephone me-3"></i>
+                  <span>+62 857 1605 8328</span>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-body p-4 p-lg-5">
+
+                <form action="./PHP dasar/forms/contact.php" method="post" class="php-email-form">
+                  <div class="row gy-4">
+
+                    <div class="col-12">
+                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    </div>
+
+                    <div class="col-12 ">
+                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    </div>
+
+                    <div class="col-12">
+                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    </div>
+
+                    <div class="col-12">
+                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    </div>
+
+                    <div class="col-12 text-center">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">EasyFolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="./PHP dasar/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./PHP dasar/assets/vendor/php-email-form/validate.js"></script>
+  <script src="./PHP dasar/assets/vendor/aos/aos.js"></script>
+  <script src="./PHP dasar/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="./PHP dasar/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./PHP dasar/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./PHP dasar/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="./PHP dasar/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="./PHP dasar/assets/js/main.js"></script>
+
+</body>
+
+</html>

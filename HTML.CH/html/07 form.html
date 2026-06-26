@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07 Form | Cepi</title>
+  <style>
+    body{
+      font-family:Arial,sans-serif;
+      background:linear-gradient(120deg,#f6d365,#fda085);
+      margin:0;padding:30px
+    }
+    h1{
+      text-align:center;
+      color:#333;
+      margin-bottom:20px
+    }
+    form{
+      max-width:650px;
+      margin:auto;
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 8px 18px rgba(0,0,0,.2)
+    }
+    table{width:100%}
+    label{font-weight:bold;color:#444}
+    input,select,textarea,button{
+      width:100%;
+      padding:8px;
+      margin:7px 0 14px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:14px;
+      transition:.3s
+    }
+    input:focus,textarea:focus,select:focus{
+      border-color:#fda085;
+      box-shadow:0 0 6px #fda085;
+      outline:none
+    }
+    input[type=radio],input[type=checkbox]{
+      width:auto;
+      margin-right:6px
+    }
+    input[type=submit],button{
+      background:#fda085;
+      color:#fff;
+      font-weight:bold;
+      border:none;
+      cursor:pointer;
+      padding:10px 15px
+    }
+    input[type=submit]:hover,button:hover{
+      background:#e67e22;
+      transform:scale(1.05)
+    }
+  </style>
+</head>
+<body>
+  <h1>Contoh Form</h1>
+  <form>
+    <table>
+      <tr>
+        <td width="150px"><label for="Nama">Nama Lengkap</label></td>
+        <td><input type="text" id="Nama" name="Nama_lengkap" placeholder="Isi dengan nama lengkap"></td>
+      </tr>
+      <tr>
+        <td><label for="Password">Password</label></td>
+        <td><input type="text" id="Password" name="Password" placeholder="Isi dengan password"></td>
+      </tr>
+      <tr>
+        <td><label for="Email">Email</label></td>
+        <td><input type="email" id="Email" name="Email" placeholder="Isi dengan email"></td>
+      </tr>
+      <tr>
+        <td><label for="Link">Link</label></td>
+        <td><input type="url" id="Link" name="Link" placeholder="Isi dengan url"></td>
+      </tr>
+      <tr>
+        <td><label for="Date">Tanggal Lahir</label></td>
+        <td><input type="date" id="Date" name="Date"></td>
+      </tr>
+      <tr>
+        <td><label>Jenis Kelamin</label></td>
+        <td>
+          <input type="radio" name="Jenkel" value="L">Laki-Laki
+          <input type="radio" name="Jenkel" value="P" checked>Perempuan
+        </td>
+      </tr>
+      <tr>
+        <td><label for="Jurusan">Jurusan</label></td>
+        <td>
+          <select name="Jurusan" id="Jurusan">
+            <option value="1">Teknik Sepeda Motor</option>
+            <option value="2">Rekayasa Perangkat Lunak</option>
+            <option value="3" disabled>Teknik Komputer dan Jaringan</option>
+            <option value="4">Farmasi Klinis dan Komunitas</option>
+            <option value="5">Perhotelan</option>
+            <option value="6">Tata Boga</option>
+            <option value="7">Akuntansi & Keuangan Lembaga</option>
+            <option value="8">Otomatisasi & Tata Kelola Perkantoran</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Hobby Anda</label></td>
+        <td>
+          <input type="checkbox" name="Hobby" value="1">Traveling
+          <input type="checkbox" name="Hobby" value="2">Sport
+          <input type="checkbox" name="Hobby" value="3">Kuliner
+          <input type="checkbox" name="Hobby" value="4">Nonton
+          <input type="checkbox" name="Hobby" value="5">Music
+        </td>
+      </tr>
+      <tr>
+        <td><label for="Alamat">Alamat</label></td>
+        <td><textarea id="Alamat" name="Alamat"></textarea></td>
+      </tr>
+      <tr>
+        <td><label for="Hp">Nomer HP</label></td>
+        <td><input type="number" id="Hp" name="Hp" required></td>
+      </tr>
+      <tr>
+        <td><label for="Mtk">Nilai Matematika</label></td>
+        <td><input type="number" id="Mtk" name="Mtk" step="0.01" required></td>
+      </tr>
+      <tr>
+        <td><label for="Photo">Upload Photo</label></td>
+        <td><input type="file" id="Photo" name="Photo"></td>
+      </tr>
+      <tr>
+        <td><label for="Warna">Pilih Warna</label></td>
+        <td><input type="color" id="Warna" name="Warna"></td>
+      </tr>
+      <tr>
+        <td><label for="Range">Input Range</label></td>
+        <td><input type="range" id="Range" name="Range"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" name="Input" value="Kirim">
+          <button type="reset">Cancel</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

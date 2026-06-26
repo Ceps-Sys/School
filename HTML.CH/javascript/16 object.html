@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi JavaScript Object</title>
+</head>
+<body>
+
+    <h1>Buka Console Browser (F12) untuk Melihat Hasil Object</h1>
+
+    <script>
+
+        /* ANATOMI STRUKTUR OBJECT:
+           - Dibuat menggunakan tanda kurung kurawal { }
+           - Isinya berupa pasangan KEY: VALUE (Kunci dan Nilai)
+           - Properties = Variabel di dalam objek (ciri-ciri/atribut)
+           - Methods] = Fungsi di dalam objek (akSi/tindakan)
+        */
+
+        // --- 1. MEMBUAT OBJECT (PERSON 1: SPONGEBOB) ---
+        const person1 = {
+            // Ini adalah PROPERTIES (Key: Value)
+            firstName: "SpongeBob",
+            lastName: "SquarePants",
+            age: 30,
+            isEmployed: true, // Tipe data Boolean
+
+            // Ini adalah METHODS (Fungsi di dalam objek)
+            sayHello: function() {
+                console.log("Hi! I'm SpongeBob.");
+            },
+            eat: function() {
+                console.log("I am eating a Krabby Patty!");
+            }
+        };
+
+        // --- 2. MEMBUAT OBJECT (PERSON 2: PATRICK) ---
+        // Catatan: Nama objek tidak boleh sama (harus unik), tapi nama "Key" di dalamnya boleh sama.
+        const person2 = {
+            // Properties milik Patrick
+            firstName: "Patrick",
+            lastName: "Star",
+            age: 42,
+            isEmployed: false,
+
+            // Methods milik Patrick (Menggunakan Arrow Function `() =>`)
+            sayHello: () => {
+                console.log("Hey... I'm Patrick...");
+            },
+            eat: () => {
+                console.log("I am eating roast beef, chicken, and pizza!");
+            }
+        };
+
+
+        // =========================================================================
+        // --- 3. CARA MENGAKSES DATA DI DALAM OBJECT ---
+        // =========================================================================
+        
+        console.log("=== MEMBACA DATA PERSON 1 (SPONGEBOB) ===");
+        // Menggunakan tanda titik ( . ) -> namaObject.namaProperty
+        console.log(person1.firstName);  // Output: SpongeBob
+        console.log(person1.lastName);   // Output: SquarePants
+        console.log(person1.age);        // Output: 30
+        console.log(person1.isEmployed); // Output: true
+
+        // Memanggil/Menjalankan Method (wajib pakai tanda kurung di akhir)
+        person1.sayHello(); // Output: Hi! I'm SpongeBob.
+        person1.eat();      // Output: I am eating a Krabby Patty!
+
+
+        console.log("\n=== MEMBACA DATA PERSON 2 (PATRICK) ===");
+        // Mengakses data milik objek kedua
+        console.log(person2.firstName);  // Output: Patrick
+        console.log(person2.lastName);   // Output: Star
+        console.log(person2.age);        // Output: 42
+        console.log(person2.isEmployed); // Output: false
+
+        // Memanggil Method milik Patrick
+        person2.sayHello(); // Output: Hey... I'm Patrick...
+        person2.eat();      // Output: I am eating roast beef, chicken, and pizza!
+
+    </script>
+</body>
+</html>
